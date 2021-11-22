@@ -5,7 +5,7 @@ def check_biggest_bid():
   biggest_bid=max(dict, key=dict.get)
   all_values=dict.values()
   biggest_value=max(all_values)
-  print("The winner is ",biggest_bid, " with a bid of £", biggest_value)
+  print("The winner is",biggest_bid, "with a bid of £"+ biggest_value)
 
 your_name=input("What is your name?: ")
 your_bid=input("What is your bid?: £")
