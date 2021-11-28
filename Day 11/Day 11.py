@@ -2,8 +2,12 @@ from graphic import logo
 import random
 import os
 
+<<<<<<< HEAD
 
 cards={"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"J":10,"Q":10,"K":10,"A":11}
+=======
+cards={"2":2,"3":3,"4":4,"5":5,"6":6,"7":7,"8":8,"9":9,"10":10,"J":10,"Q":10,"K":10,"A":1}
+>>>>>>> 5d31cef5811b70ae2f458f8291d2f0038509195a
 
 
 player_cards=[]
@@ -11,17 +15,23 @@ player_values=[]
 computer_cards=[]
 computer_values=[]
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d31cef5811b70ae2f458f8291d2f0038509195a
 def pick_player_card():
     global player_cards
     global player_values
     key_card=(random.choice(list(cards.items())))
     player_cards.append(key_card[0])
     player_values.append(key_card[1])
+<<<<<<< HEAD
     if "A" in player_cards[0:-1] and "A" in player_cards[-1]:
         player_values.append(-10)
     elif sum(player_values)>21 and "A" in player_cards[-1]:
         player_values.append(-10)
+=======
+>>>>>>> 5d31cef5811b70ae2f458f8291d2f0038509195a
     
     
 def pick_computer_card():
@@ -30,6 +40,7 @@ def pick_computer_card():
     key_card=(random.choice(list(cards.items())))
     computer_cards.append(key_card[0])
     computer_values.append(key_card[1])
+<<<<<<< HEAD
     if "A" in computer_cards[0:-1] and "A" in computer_cards[-1]:
         computer_values.append(-10)
     elif sum(computer_values)>21 and "A" in computer_cards[-1]:
@@ -93,6 +104,8 @@ def ask_score():
     elif sum(player_values)==sum(computer_values):
         print("---You scored same.---")
         final=1
+=======
+>>>>>>> 5d31cef5811b70ae2f458f8291d2f0038509195a
     
     
 def clear():
@@ -101,6 +114,7 @@ def clear():
     else:
         os.system('cls')
 
+<<<<<<< HEAD
 
 
 game=True
@@ -120,11 +134,24 @@ while game:
     else: 
       game=False
       continue    
+=======
+game=True
+while game:
+    clear()
+    
+    do_you=input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+    
+    if do_you=="y":
+        print(logo)
+    else: 
+        game=False
+>>>>>>> 5d31cef5811b70ae2f458f8291d2f0038509195a
     
     pick_player_card()
     pick_player_card()
     pick_computer_card()
     pick_computer_card()
+<<<<<<< HEAD
     your_cards()
     opponents_cards()
     check_score()
@@ -154,4 +181,11 @@ while game:
               one_more!="y"
           
             
+=======
+    print("Your cards:",(player_cards),"current score: ",sum(player_values))
+    print("computer's first card:",computer_cards[0])
+    one_more=input("Type 'y' to get another card, type 'n' to pass: ")
+    if one_more=="y":
+    
+>>>>>>> 5d31cef5811b70ae2f458f8291d2f0038509195a
 
