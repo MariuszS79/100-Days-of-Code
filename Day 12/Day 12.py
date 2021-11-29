@@ -9,7 +9,7 @@ def guessing_game():
     global attempts
     global guess
     while attempts !=0:
-        guess=(int(input("Make a guess:")))
+        guess=(int(input("Make a guess: ")))
         attempts-=1
         if guess>number:
             print("Too high.\nGuess again.")
