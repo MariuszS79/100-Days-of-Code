@@ -4,11 +4,10 @@ number=randint(1,100)
 print("psst, the correct number is ",number)
 difficulty=input("Choose a difficulty. Type 'easy' or 'hard': ")
 
-attempts=0
 
-if difficulty=="easy":
-    attempts=10
-    print("You have 10 attempts remaining to guess the number.")
+def guessing_game():
+    global attempts
+    global guess
     while attempts !=0:
         guess=(int(input("Make a guess:")))
         attempts-=1
@@ -19,9 +18,22 @@ if difficulty=="easy":
             print("Too low.\nGuess again.")
             print(f"You have {attempts} remaining to guess the number.")
         elif guess==number:
-            print("Well done, you guessed it")
+            print(f"Well done, you guessed it. It was {number}.")
             attempts=0
+    
             
+if difficulty=="easy":
+    attempts=10
+    print(f"You have {attempts} attempts remaining to guess the number.")
+    guessing_game()
+    if attempts==0 and guess!=number:
+        print(f"You didn't guess it. The number was {number}")
+else:
+    attempts=5
+    print(f"You have {attempts} attempts remaining to guess the number.")
+    guessing_game()
+    if attempts==0 and guess!=number:
+        print(f"You didn't guess it. The number was {number}.")       
 
 
 
