@@ -1,5 +1,3 @@
-import os
-
 MENU = {
     "espresso": {
         "ingredients": {
