@@ -9,4 +9,4 @@ soup = BeautifulSoup(contents, "html.parser")
 #print(soup.find_all(name="a"))
 
 for tag in (soup.find_all(name="a")):
-    print(tag.get("href"))
+    print(tag.get("href"))l
