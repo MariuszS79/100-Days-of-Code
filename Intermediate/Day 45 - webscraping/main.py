@@ -1,12 +1,38 @@
 from bs4 import BeautifulSoup
-#import lxml
+import requests
 
-with open("website.html", encoding="utf8") as file:
-    contents = file.read()
+response = requests.get("https://news.ycombinator.com/news")
 
-soup = BeautifulSoup(contents, "html.parser")
+yc_web_page = (response.text)
 
-#print(soup.find_all(name="a"))
+soup = BeautifulSoup(yc_web_page, "html.parser")
 
-for tag in (soup.find_all(name="a")):
-    print(tag.get("href"))
+anchor_tag = (soup.find_all(name="a", class_="titlelink"))
+
+
+linklist=[]
+
+for i in anchor_tag:
+    links = i.get("href")
+    linklist.append(links)
+
+print(*linklist, sep='\n')
+
+
+
+
+
+
+
+
+# #import lxml
+#
+# with open("website.html", encoding="utf8") as file:
+#     contents = file.read()
+#
+# soup = BeautifulSoup(contents, "html.parser")
+#
+# #print(soup.find_all(name="a"))
+#
+# for tag in (soup.find_all(name="a")):
+#     print(tag.get("href"))
