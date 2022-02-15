@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6a52004-1301-4481-b9c8-35b823f9646b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Intermediate/Day 48 - Selenium/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediate/Day 48 - Selenium/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediate/Day 48 - Selenium/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
