@@ -61,15 +61,7 @@ while time.time()<timeout:
             cursor_price*=1.1
         check = time.time() + 5
 
-
-
-
-
-
-
-
-
-
+# przecinek w cenach
 
 
 
