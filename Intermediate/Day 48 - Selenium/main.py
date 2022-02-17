@@ -24,7 +24,9 @@ time_machine_price = 123456789
 
 while time.time()<timeout:
     money_web = driver.find_element_by_id("money")
-    money = int(money_web.text)
+    money = (money_web.text)
+    money = money.replace(",","")
+    money = int(money)
     cookie.click()
     if time.time() > check:
         if money >= time_machine_price:
@@ -61,7 +63,10 @@ while time.time()<timeout:
             cursor_price*=1.1
         check = time.time() + 5
 
-# przecinek w cenach
+
+
+driver.quit()
+
 
 
 
