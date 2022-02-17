@@ -10,7 +10,7 @@ driver.get("http://orteil.dashnet.org/experiments/cookie/")
 cookie = driver.find_element_by_id("cookie")
 
 check = time.time() + 5
-timeout = time.time() + 60*5
+timeout = time.time() + 10
 
 cursor_price = 15
 grandma_price = 100
@@ -66,6 +66,7 @@ while time.time() < timeout:
 cps = driver.find_element_by_id("cps")
 cps = cps.text
 cps = ''.join(filter(str.isdigit, cps))
+cps = int(cps)
 print(f"your final score is {cps} cookies per second")
 
 driver.quit()
