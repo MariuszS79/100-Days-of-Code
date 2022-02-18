@@ -65,8 +65,7 @@ while time.time() < timeout:
 
 cps = driver.find_element_by_id("cps")
 cps = cps.text
-cps = ''.join(filter(str.isdigit, cps))
-cps = int(cps)
+cps = cps.replace("cookies/second : ", "")
 print(f"your final score is {cps} cookies per second")
 
 driver.quit()
