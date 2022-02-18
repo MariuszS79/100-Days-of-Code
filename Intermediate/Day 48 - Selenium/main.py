@@ -69,3 +69,4 @@ cps = cps.replace("cookies/second : ", "")
 print(f"your final score is {cps} cookies per second")
 
 driver.quit()
+
